@@ -33,7 +33,6 @@ def main():
   json_data = {"model_name": "default", "data": {"images": [img]} }
   result = requests.post(endpoint, json=json_data)
   out_img = result.json()
-  # import pdb; pdb.set_trace()
   pred = out_img['out']
   pred = np.array(pred)
   polygon = save_contours(pred[0])
