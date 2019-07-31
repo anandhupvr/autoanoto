@@ -1,7 +1,7 @@
 from flask import Flask, request, Response
 import json 
 import os
-from fg import fg
+from foreground import fg
 rect = (17,25,199,202)
 
 app = Flask(__name__)
