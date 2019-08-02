@@ -29,7 +29,8 @@ def save_contours(mask):
 
 
 def main():
-  endpoint = "http://34.73.46.73:8500"
+  # we have used simple tensorflow servings to serve the model  
+  endpoint = "http://localhost:port"
   json_data = {"model_name": "default", "data": {"images": [img]} }
   result = requests.post(endpoint, json=json_data)
   out_img = result.json()
